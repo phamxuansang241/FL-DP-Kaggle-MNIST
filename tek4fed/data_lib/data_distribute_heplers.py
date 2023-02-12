@@ -30,7 +30,7 @@ def non_iid_data_indices(nb_clients: int, labels: np.ndarray, num: int = 3):
                 times[ind] += 1
         print(f'Client {i} with labels {current}')
         contain.append(current)
-    net_dataidx_map ={i:np.ndarray(0,dtype=np.int64) for i in range(nb_clients)}
+    net_dataidx_map ={i:np.ndarray(0,dtype=np.int32) for i in range(nb_clients)}
 
     for i in range(nb_class):
         idx_k = np.where(labels==i)[0]
